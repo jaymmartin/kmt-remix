@@ -14,13 +14,13 @@ export const meta: MetaFunction = () => {
 export default function Rates() {
   return (
     <Main>
-      <h1>Rates</h1>
-      <div>
+      <h1 className="font-bold text-xl mb-3">Rates</h1>
+      <p className="mb-6">
         Individual session (45 minutes) $180 <br />
         Payment via cash or credit card is due at time of service.
-      </div>
+      </p>
       <div>
-        <h1>Insurance</h1>
+        <h1 className="font-bold text-xl mb-3">Insurance</h1>
         <p className="mb-3">Kate Martin Therapy is an out-of-network provider. We are happy to provide you with an invoice to submit
         to your health plan for reimbursement according to your policy provisions.
         </p>
