@@ -1,10 +1,12 @@
 import type { MetaFunction } from "@remix-run/node";
+import UnorderedList from "~/components/UnorderedList";
+import Main from '../components/Main'
 
 export const meta: MetaFunction = () => {
   return {
     title: "Kate Martin Therapy - About",
     description:
-    "About the experience, specialities, and issues provided by Kate Martin Therapy.",
+      "About the experience, specialities, and issues provided by Kate Martin Therapy.",
     "og:image": "https://katemartintherapy.com/images/brittany.webp",
     "og-url": "https://katemartintherapy.com/about",
   };
@@ -12,18 +14,19 @@ export const meta: MetaFunction = () => {
 
 export default function About() {
   return (
-    <div id="main">
-      <div id="content">
-        <h1>About</h1>
-        <div>
-          Kate Martin, LPC <br /><br />
-          Clinically licensed therapist in New Jersey<br />
-          MA, Kean University<br />
-          BA, Duke University<br /><br />
-
-          Kate works with clients interested in:
-          <ul className="list">
-            <li >Coping with anxiety, anger, and sadness</li>
+    <Main>
+      <h1>About</h1>
+      <div>
+        <div className="mb-3">Kate Martin, LPC</div>
+        <ul className="mb-3">
+          <li>Clinically licensed therapist in New Jersey</li>
+          <li>MA, Kean University</li>
+          <li>BA, Duke University</li>
+        </ul>
+        <div className="space-y-4">
+          <div>Kate works with clients interested in:</div>
+          <UnorderedList>
+            <li>Coping with anxiety, anger, and sadness</li>
             <li>Managing stress at home, work, and school</li>
             <li>Improving the quality of their lives and relationships with others</li>
             <li>Developing effective communication and the ability to advocate for themselves</li>
@@ -35,10 +38,10 @@ export default function About() {
             <li>Practicing self-compassion and building confidence</li>
             <li>Learning practical skills for managing time and responsibilities</li>
             <li>Finding ways to invite joy and peace into their lives</li>
-          </ul>
-          Kate Martin Therapy is an inclusive practice welcoming clients of all backgrounds, races, ethnic identities, countries of origin, genders, sexual orientations, faiths, abilities, and bodies.
+          </UnorderedList>
+          <div>Kate Martin Therapy is an inclusive practice welcoming clients of all backgrounds, races, ethnic identities, countries of origin, genders, sexual orientations, faiths, abilities, and bodies.</div>
         </div>
       </div>
-    </div>
+    </Main>
   );
 }

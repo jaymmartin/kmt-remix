@@ -1,5 +1,6 @@
 
-import type { MetaFunction } from "@remix-run/node"; // or cloudflare/deno
+import type { MetaFunction } from "@remix-run/node";
+import Main from '../components/Main'
 
 /*
 <meta property="og:title" content="Kate Martin Therapy - Telehealth Therapy for NJ">
@@ -21,14 +22,12 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <>
-      <h2 style={{ marginLeft: ".5em" }}>New Jersey Psychotherapy and Counseling</h2>
-      <div id="main">
-        <div id="content">
-          <div id="banner">
-            <img width="800" src="images/brittany.webp" alt="Grass in front of sunset" />
-          </div>
+      <h2 className="font-bold text-l md:text-xl lg:text-2xl mb-3 md:mb-8 lg:mb-12">New Jersey Psychotherapy and Counseling</h2>
+      <Main>
+        <div id="banner">
+          <img className="rounded-xl" width="800" src="images/brittany.webp" alt="Grass in front of sunset" />
         </div>
-      </div>
+      </Main>
     </>
   );
 }

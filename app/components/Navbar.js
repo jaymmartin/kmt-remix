@@ -1,50 +1,38 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link, NavLink } from "react-router-dom";
+import { Menu } from 'react-feather';
+
+const Links = () => {
+
+  const linkClasses = ({ isActive }) => {
+    return `basis-full text-center ${isActive ? 'text-gray-500' : ''} hover:text-gray-500`;
+  }
+  return <>
+    <NavLink className={linkClasses} to="/about">About</NavLink>
+    <NavLink className={linkClasses} to="/services">Services</NavLink>
+    <NavLink className={linkClasses} to="/rates">Rates</NavLink>
+    {/* <a href="contact.html">Contact</a> */}
+    {/* <a href="https://luminello.com" target="_blank">Portal</a> */}
+  </>;
+}
 
 export default function Navbar() {
-  const showMenu = () => {};
+  const [showHamburger, setShowHamburger] = useState(false);
+
+  const showMenu = () => {
+    setShowHamburger(!showHamburger);
+  };
+
+
   return (
-    <div id="navbar">
-        <div id="brand"><Link to="/" >KATE MARTIN THERAPY</Link></div>
-        <div id="links">
-            <Link to="/about">About</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/rates">Rates</Link>
-            {/* <a href="contact.html">Contact</a> */}
-            {/* <a href="https://luminello.com" target="_blank">Portal</a> */}
-        </div>
-        <a href="#mobile" id="hamburger" className="icon" onClick={showMenu}>
-            <i data-feather="menu"></i>
-        </a>
-
-    </div>
-
-    // <div>
-    //   <h1>Basic Example</h1>
-
-    //   <p>
-    //     This example demonstrates some of the core features of React Router
-    //     including nested <code>&lt;Route&gt;</code>s,{" "}
-    //     <code>&lt;Outlet&gt;</code>s, <code>&lt;Link&gt;</code>s, and using a
-    //     "*" route (aka "splat route") to render a "not found" page when someone
-    //     visits an unrecognized URL.
-    //   </p>
-
-    //   {/* Routes nest inside one another. Nested route paths build upon
-    //         parent route paths, and nested route elements render inside
-    //         parent route elements. See the note about <Outlet> below. */}
-    //   <Routes>
-    //     <Route path="/" element={<Layout />}>
-    //       <Route index element={<Home />} />
-    //       <Route path="about" element={<About />} />
-    //       <Route path="dashboard" element={<Dashboard />} />
-
-    //       {/* Using path="*"" means "match anything", so this route
-    //             acts like a catch-all for URLs that we don't have explicit
-    //             routes for. */}
-    //       <Route path="*" element={<NoMatch />} />
-    //     </Route>
-    //   </Routes>
-    // </div>
+    <header className="flex flex-wrap justify-between items-center w-full mt-11 mb-5">
+      <div className="font-bold text-xl md:text-3xl lg:text-5xl"><Link to="/" >KATE MARTIN THERAPY</Link></div>
+      <a className="md:hidden" href="#mobile" onClick={showMenu}>
+        <Menu />
+      </a>
+      <div className={`${showHamburger ? 'flex flex-wrap justify-between' : 'hidden'} basis-full mt-3 md:mt-auto md:basis-auto md:block md:space-x-8 md:text-xl lg:text-3xl`}>
+        <Links />
+      </div>
+    </header>
   );
 }

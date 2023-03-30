@@ -19,7 +19,7 @@ export const meta: MetaFunction = () => ({
   "og-type": "website"
 });
 
-import styles from "./shared.css";
+import styles from "./tailwind.css";
 
 /*
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,9 +46,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="font-sans mx-4 flex flex-col h-screen">
         <Navbar />
-        <Outlet />
+        <div className="grow"><Outlet /></div>
         <Footer />
         <ScrollRestoration />
         <Scripts />
