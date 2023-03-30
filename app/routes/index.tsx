@@ -22,7 +22,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <>
-      <h2 className="font-bold text-l md:text-xl lg:text-2xl mb-3 md:mb-8 lg:mb-12">New Jersey Psychotherapy and Counseling</h2>
+      <h1 className="font-bold text-l md:text-xl lg:text-2xl mb-3 md:mb-8 lg:mb-12">New Jersey Psychotherapy and Counseling</h1>
       <Main>
         <div id="banner">
           <img className="rounded-xl" width="800" src="images/brittany.webp" alt="Grass in front of sunset" />
