@@ -19,7 +19,7 @@ export default function Services() {
           <img className="w-full" src="images/tran.webp" />
         </div>
         <div className="basis-full md:basis-5/12">
-          <h1>Services</h1>
+          <h1 className="font-bold text-3xl mb-6">Services</h1>
           <div>
             <h2 className="font-bold text-2xl mb-2">Getting Started</h2>
             It's okay if you don't know where to start. If there is something in your life that is concerning or
