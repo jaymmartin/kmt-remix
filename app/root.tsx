@@ -27,6 +27,12 @@ export function links() {
     { rel: "preconnect", href: "https://fonts.googleapis.com"},
     { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin:"anonymous"},
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope&display=swap"},
+
+    //favicons
+    { rel: "apple-touch-icon", sizes:"180x180", href: "/apple-touch-icon.png"},
+    { rel: "icon", type:"image/png", sizes:"32x32", href: "/favicon-32x32.png"},
+    { rel: "icon", type:"image/png", sizes:"16x16", href: "/favicon-16x16.png"},
+    { rel: "manifest", href: "/site.webmanifest"}
   ];
 }
 
@@ -37,7 +43,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans mx-4 flex flex-col h-screen">
+      <body className="font-sans mx-4 flex flex-col h-screen dark:bg-zinc-800 dark:text-zinc-300">
         <Navbar />
         <div className="grow"><Outlet /></div>
         <Footer />
