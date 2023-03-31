@@ -7,7 +7,7 @@ export default function Footer() {
         <Mail />
         <span className="ml-3">info@katemartintherapy.com</span>
       </a>
-      <a className="flex space-x-1 md:space-x-3" href="tel:5555555555">
+      <a className="flex space-x-1 md:space-x-3" href="tel:6463971025">
         <Phone />
         <span>646-397-1025</span>
       </a>
