@@ -43,7 +43,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans mx-4 flex flex-col h-screen">
+      <body className="font-sans mx-4 flex flex-col h-screen dark:bg-zinc-800 dark:text-zinc-300">
         <Navbar />
         <div className="grow"><Outlet /></div>
         <Footer />
