@@ -25,6 +25,7 @@ export default function Navbar() {
 
 
   return (
+    <>
     <header className="flex flex-wrap justify-between items-center w-full mt-11 mb-5">
       <div className="font-bold text-xl md:text-3xl lg:text-5xl"><Link to="/" >KATE MARTIN THERAPY</Link></div>
       <a className="md:hidden" href="#mobile" onClick={showMenu}>
@@ -34,5 +35,7 @@ export default function Navbar() {
         <Links />
       </div>
     </header>
+    <div className="font-bold text-l md:text-xl lg:text-2xl mb-3 md:mb-8 lg:mb-12">New Jersey Psychotherapy and Counseling</div>
+    </>
   );
 }
