@@ -1,6 +1,7 @@
 
 import type { MetaFunction } from "@remix-run/node";
 import Main from '../components/Main'
+import Image from '../components/Image'
 
 export const meta: MetaFunction = () => {
   return {
@@ -16,7 +17,7 @@ export default function Index() {
   return (
     <Main>
       <div id="banner">
-        <img className="rounded-xl" width="800" src="images/brittany.webp" alt="Grass in front of sunset" />
+        <Image src="images/brittany.webp" alt="Grass in front of sunset" title="Silhouette of Grasses Against the Light of Setting Sun" author="brittany" originalLink="https://www.pexels.com/photo/silhouette-of-grasses-against-the-light-of-setting-sun-87812/" />
       </div>
     </Main>
   );

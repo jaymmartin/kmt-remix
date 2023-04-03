@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import UnorderedList from "~/components/UnorderedList";
 import Main from '../components/Main'
+import Image  from '../components/Image'
 
 
 export const meta: MetaFunction = () => {
@@ -17,7 +18,7 @@ export default function Rates() {
       
       <div className="flex flex-wrap justify-between space-y-3 md:space-y-0">
       <div className="basis-full md:basis-6/12">
-        <img className="object-cover h-72 md:h-fit w-full rounded-xl" src="images/antony.webp" />
+        <Image src="images/antony.webp" alt="Trees in Field" title="Trees on Field" originalLink="https://www.pexels.com/photo/trees-on-field-12925064/" author="Antony Trivet" />
       </div>
       <div className="basis-full md:basis-5/12">
         <h1 className="font-bold text-xl mb-3">Rates</h1>
