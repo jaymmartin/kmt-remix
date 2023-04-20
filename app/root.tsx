@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction, SerializeFrom } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { ExternalScripts, ExternalScriptsFunction } from "remix-utils";
 import Navbar from 'app/components/Navbar'
 import Footer from 'app/components/Footer'
 
@@ -24,17 +25,41 @@ import styles from "./tailwind.css";
 export function links() {
   return [
     { rel: "stylesheet", href: styles },
-    { rel: "preconnect", href: "https://fonts.googleapis.com"},
-    { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin:"anonymous"},
-    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope&display=swap"},
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap" },
 
     //favicons
-    { rel: "apple-touch-icon", sizes:"180x180", href: "/apple-touch-icon.png"},
-    { rel: "icon", type:"image/png", sizes:"32x32", href: "/favicon-32x32.png"},
-    { rel: "icon", type:"image/png", sizes:"16x16", href: "/favicon-16x16.png"},
-    { rel: "manifest", href: "/site.webmanifest"}
+    { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+    { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+    { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+    { rel: "manifest", href: "/site.webmanifest" },
   ];
 }
+
+// <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5dd3b98004e4423d9d9b772d09a6e688"}'></script><!-- End Cloudflare Web Analytics -->
+// export function scripts() {
+//   return [
+//     { src: 'https://static.cloudflareinsights.com/beacon.min.js', dataCfBeacon: '{"token": "5dd3b98004e4423d9d9b772d09a6e688"}', defer:true}
+//   ];
+// }
+
+let scripts: ExternalScriptsFunction = ({ id, data, params, location, parentsData, }) => {
+  const prodScripts: any[] = [
+    { src: 'https://static.cloudflareinsights.com/beacon.min.js', dataCfBeacon: '{"token": "5dd3b98004e4423d9d9b772d09a6e688"}', defer: true },
+  ];
+  const devScripts: any[] = [];
+  const allScripts: any[] = [];
+
+  if (process.env.NODE_ENV === "development")
+    return devScripts.concat(allScripts);
+
+  return prodScripts.concat(allScripts);
+};
+
+// and export it through the handle, you could also create it inline here
+// if you don't care about the type
+export let handle = { scripts };
 
 export default function App() {
   return (
@@ -48,6 +73,7 @@ export default function App() {
         <div className="grow"><Outlet /></div>
         <Footer />
         <ScrollRestoration />
+        <ExternalScripts />
         <Scripts />
         <LiveReload />
       </body>
