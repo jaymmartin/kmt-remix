@@ -17,8 +17,7 @@ export default function Services() {
     <Main>
       <div className="flex flex-wrap justify-between">
         <div className="basis-full md:basis-6/12">
-          {/* <img className="w-full rounded-xl" src="images/tran.webp" /> */}
-          <Image src="images/tran.webp" alt="Paved path through woods" title="Photography of Road Between Forest" originalLink="https://www.pexels.com/photo/photography-of-road-between-forest-730541/" author="Thach Tran" />
+          <Image src="images/tran.webp" alt="Paved path through woods" title="Photography of Road Between Forest" originalLink="https://www.pexels.com/photo/photography-of-road-between-forest-730541/" author="Thach Tran"/>
         </div>
         <div className="basis-full md:basis-5/12">
           <h1 className="font-bold text-3xl mb-6">Services</h1>
