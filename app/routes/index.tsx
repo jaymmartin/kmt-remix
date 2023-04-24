@@ -16,7 +16,8 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <Main>
-      <div id="banner">
+      <div className="text-center text-xl mt-6 mb-6">Flexible online, phone, and walk-and-talk appointment options available for your comfort and convenience</div>
+      <div>
         <Image src="images/brittany.webp" alt="Grass in front of sunset" title="Silhouette of Grasses Against the Light of Setting Sun" author="brittany" originalLink="https://www.pexels.com/photo/silhouette-of-grasses-against-the-light-of-setting-sun-87812/" />
       </div>
     </Main>
