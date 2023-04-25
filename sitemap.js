@@ -34,6 +34,9 @@ const pages = [
   "/about",
   "/services",
   "/rates",
+  "/parenting",
+  "/options",
+  "/work"
 ];
 
 const now = new Date();
