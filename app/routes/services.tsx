@@ -15,23 +15,29 @@ export const meta: MetaFunction = () => {
 export default function Services() {
   return (
     <Main>
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-between items-center">
         <div className="basis-full md:basis-6/12">
-          <Image src="images/tran.webp" alt="Paved path through woods" title="Photography of Road Between Forest" originalLink="https://www.pexels.com/photo/photography-of-road-between-forest-730541/" author="Thach Tran"/>
+          <Image src="images/olek.webp" alt="Scenic View of Trees Surrounded by Fog" title="Scenic View of Trees Surrounded by Fog" author="Oleksandr Pidvalnyi" originalLink="https://www.pexels.com/photo/scenic-view-of-trees-surrounded-by-fog-1007957/" />
         </div>
         <div className="basis-full md:basis-5/12">
           <h1 className="font-bold text-3xl mb-6">Services</h1>
           <div>
-            <h2 className="font-bold text-2xl mb-2">Getting Started</h2>
-            It's okay if you don't know where to start. If there is something in your life that is concerning or
-            confusing to you, we can discuss it together. Sessions provide you with the time and space to be
-            yourself in a nonjudgmental and supportive environment.
+            <p className="mt-3">
+              I help people <span className="font-bold">cope with difficult situations</span> and learn ways to <span className="font-bold">manage stress</span> at home, work, or school.
+            </p>
+
+            <p className="mt-3">
+              People work with me to develop <span className="font-bold">effective communication skills</span> and the <span className="font-bold">ability to advocate</span> for themselves, their needs, and their interests. My clients find more <span className="font-bold">meaning, purpose, and connection</span> in their day-to-day lives by better <span className="font-bold">understanding themselves</span> and their capacity for <span className="font-bold">self-compassion, peace, and joy</span>.
+            </p>
+            <p className="mt-3">
+              I also help people learn practical skills for <span className="font-bold">managing time and responsibilities</span>, navigate <span className="font-bold">life transitions and changes</span>, explore <span className="font-bold">body image and relationships with food</span>, and process <span className="font-bold">LGBTQIA+ issues and experiences</span>.
+            </p>
           </div>
         </div>
       </div>
-      <div className="basis-full mt-4">
-        <h2 className="font-bold text-2xl mb-2">Appointment Options</h2>
-        <div className="mb-2">
+      {/* <div className="basis-full mt-4">
+        <h2 className="font-bold text-2xl mb-4 md:mb-8">Appointment Options</h2>
+        <div className="mb-4 md:mb-8">
           <h3 className="font-bold text-xl mb-2">Virtual Sessions</h3>
           Virtual appointments via video or phone allow you to engage in session from the comfort of your
           home.
@@ -56,7 +62,7 @@ export default function Services() {
           Gentle bilateral movement in a natural outdoor setting - a literal walk in the park - produces
           physiological and psychological relaxation, reduces stress, and promotes feelings of well being.
         </div>
-      </div>
+      </div> */}
     </Main>
   );
 }
