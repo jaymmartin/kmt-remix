@@ -30,7 +30,7 @@ export default function About() {
           <div className="space-y-4">
             <div>I provide clinically licensed psychotherapy and counseling services to clients throughout New Jersey.</div>
 
-            <div>I use an integrative approach in order to tailor evidence-based treatment methods to each individual's unique strengths, context, and needs. My therapy style is approachable, warm, and insightful.</div>
+            <div>I use an integrative approach in order to tailor evidence-based treatment methods to each individual's unique strengths, needs, and context. My therapy style is approachable, warm, and insightful.</div>
 
             <div>Kate Martin Therapy is an inclusive practice welcoming clients of all backgrounds, races, ethnic identities, countries of origin, genders, sexual orientations, faiths, abilities, and bodies.</div>
           </div>

@@ -18,13 +18,13 @@ export default function Rates() {
 
       <div className="flex flex-wrap justify-between space-y-3 md:space-y-0">
         <div className="basis-full md:basis-6/12">
-          <Image src="images/antony.webp" alt="Trees in Field" title="Trees on Field" originalLink="https://www.pexels.com/photo/trees-on-field-12925064/" author="Antony Trivet" />
+          <Image src="images/eberhard.webp" alt="Evergreen trees in forest on misty day" title="Evergreen trees in forest on misty day" author="eberhard grossgasteiger" originalLink="https://www.pexels.com/photo/evergreen-trees-in-forest-on-misty-day-4406179/" />
         </div>
         <div className="basis-full md:basis-5/12">
           <h1 className="font-bold text-xl mb-3">Rates</h1>
           <p className="mb-6">
             Individual session (45 minutes) $180 <br />
-            Sessions longer in duration are charged pro-rata. <br /><br />
+            Sessions that run longer than 45 minutes are charged for additional time pro-rata. <br /><br />
             Payment via cash or credit card is due at time of service.
 
           </p>

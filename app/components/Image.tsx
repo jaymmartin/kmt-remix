@@ -1,7 +1,7 @@
 interface ImageProps {
   src: string,
   alt: string,
-  classNames?: string,
+  className?: string,
   title?: string,
   author?: string,
   originalLink?: string,
@@ -46,7 +46,7 @@ export default function Image(props: ImageProps) {
     author = "by " + props.author + " "
 
   return <div className="">
-    <img className="object-cover rounded-xl max-w-screen-lg w-full m-auto" src={props.src} alt={props.alt} />
+    <img className={`object-cover rounded-xl max-w-screen-lg w-full m-auto ${props.className}`} src={props.src} alt={props.alt} />
     <div className="text-gray-400 text-[7px] md:text-[9px] w-full text-end">
       {title}
       {author}

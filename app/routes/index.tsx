@@ -16,9 +16,17 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <Main>
-      <div className="text-center text-xl mt-6 mb-6">Flexible online, phone, and walk-and-talk appointment options available for your comfort and convenience</div>
+      <div className="text-center text-xl mt-6 mb-6">Offering Flexible Online, Phone, and Walk-and-Talk Appointment Options for Your Comfort and Convenience
+</div>
       <div>
-        <Image src="images/brittany.webp" alt="Grass in front of sunset" title="Silhouette of Grasses Against the Light of Setting Sun" author="brittany" originalLink="https://www.pexels.com/photo/silhouette-of-grasses-against-the-light-of-setting-sun-87812/" />
+      <Image src="images/garcia.webp" alt="Sunset sky over mountainous valley covered with lush vegetation" title="Sunset sky over mountainous valley covered with lush vegetation" author="Vanessa Garcia" originalLink="https://www.pexels.com/photo/sunset-sky-over-mountainous-valley-covered-with-lush-vegetation-6324136/" />
+        {/* <Image src="images/marta.jpg" alt="Calm lake surrounded by autumn trees" title="Calm lake surrounded by autumn trees" author="Marta Wave" originalLink="https://www.pexels.com/photo/calm-lake-surrounded-by-autumn-trees-5876642/" /> */}
+
+        
+        
+        
+        
+        
       </div>
     </Main>
   );
