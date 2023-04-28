@@ -17,7 +17,7 @@ export default function Options() {
     <Main>
       <div className="flex flex-wrap justify-between">
         <div className="basis-full md:basis-6/12">
-          <Image src="images/tran.webp" alt="Paved path through woods" title="Photography of Road Between Forest" originalLink="https://www.pexels.com/photo/photography-of-road-between-forest-730541/" author="Thach Tran" />
+        <Image src="images/eberhard.webp" alt="Evergreen trees in forest on misty day" title="Evergreen trees in forest on misty day" author="eberhard grossgasteiger" originalLink="https://www.pexels.com/photo/evergreen-trees-in-forest-on-misty-day-4406179/" />
         </div>
         <div className="basis-full md:basis-5/12">
           <h2 className="font-bold text-3xl mb-2">Options</h2>
@@ -41,7 +41,7 @@ export default function Options() {
             </div>
             <div>
               <h4 className="font-bold text-l">What are the benefits of walk and talk therapy?</h4>
-              Gentle bilateral movement in a natural outdoor setting - a literal walk in the park - produces physiological and psychological relaxation, reduces stress, and promotes feelings of well being. For people who feel stuck, walk-and-talk sessions can facilitate forward movement and momentum and the ability to see new perspectives.
+              Gentle bilateral movement in a natural outdoor setting - a literal walk in the park - produces physiological and psychological relaxation, reduces stress, and promotes feelings of well being. <div className="mt-3"/> For people who feel stuck, walk-and-talk sessions can facilitate forward movement and momentum and the ability to see new perspectives.
             </div>
           </div>
         </div>
