@@ -16,17 +16,17 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <Main>
-      <div className="text-center text-xl mt-6 mb-6">Offering Flexible Online, Phone, and Walk-and-Talk Appointment Options for Your Comfort and Convenience
-</div>
-      <div>
-      <Image src="images/garcia.webp" alt="Sunset sky over mountainous valley covered with lush vegetation" title="Sunset sky over mountainous valley covered with lush vegetation" author="Vanessa Garcia" originalLink="https://www.pexels.com/photo/sunset-sky-over-mountainous-valley-covered-with-lush-vegetation-6324136/" />
-        {/* <Image src="images/marta.jpg" alt="Calm lake surrounded by autumn trees" title="Calm lake surrounded by autumn trees" author="Marta Wave" originalLink="https://www.pexels.com/photo/calm-lake-surrounded-by-autumn-trees-5876642/" /> */}
+      <h1 className="text-center text-xl mt-6">
+        Providing Services to Clients Throughout New Jersey
+      </h1>
 
-        
-        
-        
-        
-        
+      <h2 className="text-center text-xl mt-6 mb-6">
+        Flexible Online, Phone, and Walk-and-Talk Appointment Options for Your Comfort and Convenience
+      </h2>
+
+      <div>
+        <Image src="images/garcia.webp" alt="Sunset sky over mountainous valley covered with lush vegetation" title="Sunset sky over mountainous valley covered with lush vegetation" author="Vanessa Garcia" originalLink="https://www.pexels.com/photo/sunset-sky-over-mountainous-valley-covered-with-lush-vegetation-6324136/" />
+        {/* <Image src="images/marta.jpg" alt="Calm lake surrounded by autumn trees" title="Calm lake surrounded by autumn trees" author="Marta Wave" originalLink="https://www.pexels.com/photo/calm-lake-surrounded-by-autumn-trees-5876642/" /> */}
       </div>
     </Main>
   );

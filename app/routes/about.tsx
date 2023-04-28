@@ -17,7 +17,7 @@ export default function About() {
     <Main>
       <div className="flex flex-wrap justify-between space-y-3 md:space-y-0 mt-6">
         <div className="basis-full md:basis-5/12">
-          <img className="object-cover h-72 md:h-fit w-full rounded-xl" src="images/kate.webp" alt="Kate Martin smiling"/>
+          <img className="object-contain md:object-cover md:max-h-96 h-full w-full rounded-xl" src="images/kate.webp" alt="Kate Martin smiling"/>
         </div>
         <div className="basis-full md:basis-6/12">
           
@@ -28,7 +28,7 @@ export default function About() {
             <li>BA, Duke University</li>
           </ul>
           <div className="space-y-4">
-            <div>I provide clinically licensed psychotherapy and counseling services to clients throughout New Jersey.</div>
+            <div>I provide clinically licensed psychotherapy, counseling, and parenting consultation services to clients throughout New Jersey.</div>
 
             <div>I use an integrative approach in order to tailor evidence-based treatment methods to each individual's unique strengths, needs, and context. My therapy style is approachable, warm, and insightful.</div>
 
