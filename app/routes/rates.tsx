@@ -19,7 +19,6 @@ export default function Rates() {
       <div className="flex flex-wrap justify-between space-y-3 md:space-y-0">
         <div className="basis-full md:basis-6/12">
           <Image src="images/tran.webp" alt="Paved path through woods" title="Photography of Road Between Forest" originalLink="https://www.pexels.com/photo/photography-of-road-between-forest-730541/" author="Thach Tran" />
-          
         </div>
         <div className="basis-full md:basis-5/12">
           <h1 className="font-bold text-xl mb-3">Rates</h1>

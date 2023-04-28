@@ -15,7 +15,6 @@ export default function Main(props: MainProps) {
 
     <div className="flex justify-center">
       <div className="max-w-screen-lg">
-      <a href="https://www.psychologytoday.com/profile/1117621" className="sx-verified-seal"></a>
         {props.children}
       </div>
     </div>

@@ -37,7 +37,6 @@ export function links() {
   ];
 }
 
-
 let scripts: ExternalScriptsFunction = ({ id, data, params, location, parentsData, }) => {
   const prodScripts: any[] = [
     { src: 'https://static.cloudflareinsights.com/beacon.min.js', dataCfBeacon: '{"token": "5dd3b98004e4423d9d9b772d09a6e688"}', defer: true },
