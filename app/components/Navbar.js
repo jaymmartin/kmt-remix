@@ -14,6 +14,7 @@ const Links = () => {
     <NavLink aria-label="link to work with me page" className={linkClasses} to="/work">Work With Me</NavLink>
     <NavLink aria-label="link to options page" className={linkClasses} to="/options">Options</NavLink>
     <NavLink aria-label="link to rates page" className={linkClasses} to="/rates">Rates</NavLink>
+    <NavLink aria-label="link to client portal" className={linkClasses} to="https://katemartintherapy.patientsecure.me/" target="_blank">Portal</NavLink>
     {/* <a href="contact.html">Contact</a> */}
     {/* <a href="https://luminello.com" target="_blank">Portal</a> */}
   </>;
