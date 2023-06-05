@@ -21,13 +21,19 @@ export const meta: MetaFunction = () => ({
 });
 
 import styles from "./tailwind.css";
+import { SyntheticEvent } from "react";
+
+function removePrint(element: SyntheticEvent) {
+  if (element.target && element.target instanceof HTMLElement)
+    element.target.removeAttribute('media');
+}
 
 export function links() {
   return [
     { rel: "stylesheet", href: styles },
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap" },
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap", onLoad: removePrint, media:'print' },
 
     //favicons
     { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
@@ -39,7 +45,7 @@ export function links() {
 
 let scripts: ExternalScriptsFunction = ({ id, data, params, location, parentsData, }) => {
   const prodScripts: any[] = [
-    { src: 'https://static.cloudflareinsights.com/beacon.min.js', dataCfBeacon: '{"token": "5dd3b98004e4423d9d9b772d09a6e688"}', defer: true },
+    { src: 'https://static.cloudflareinsights.com/beacon.min.js', "data-cf-beacon": '{"token": "5dd3b98004e4423d9d9b772d09a6e688"}', defer: "defer" },
   ];
   const devScripts: any[] = [];
   const allScripts: any[] = [];

@@ -16,11 +16,11 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <Main>
-      <h1 className="text-center text-xl mt-6">
+      <h1 className="text-center md:text-xl mt-6">
         Providing Services to Clients Throughout New Jersey
       </h1>
 
-      <h2 className="text-center text-xl mt-6 mb-6">
+      <h2 className="text-center md:text-xl mt-6 mb-6">
         Flexible Online, Phone, and Walk-and-Talk Appointment Options for Your Comfort and Convenience
       </h2>
 

@@ -3,7 +3,7 @@ interface MainProps {
 }
 
 function Starburst() {
-  return <div className="w-full lg:w-max lg:mx-auto lg:px-2 rounded-lg border-2 border-black border-solid dark:border-white text-center py-1 mb-5">
+  return <div className="w-max mx-auto px-2 rounded-lg border-2 border-black border-solid dark:border-white text-center py-1 mb-5">
     <a className="underline" href="tel:6463971025">Call</a> or <a className="underline" href="mailto:info@katemartintherapy.com" target="_blank" rel="noopener noreferrer">Email</a> for a Free 15 Minute Consultation
   </div>
 }
