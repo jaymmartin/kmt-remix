@@ -41,11 +41,14 @@ const pages = [
 
 const now = new Date();
 const sitemap = {
-  urlset: { url: pages.map(page => ({    
+  _declaration: { _attributes: {"version":"1.0", "encoding":"utf-8"}},
+  urlset: {     
+    _attributes: { xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9"},
+    url: pages.map(page => ({    
 
-      loc: "https://katemartintherapy.com"+page,
-      lastmod: now.toISOString().substring(0, 10),
-      priority: 1.0
+        loc: "https://katemartintherapy.com"+page,
+        lastmod: now.toISOString().substring(0, 10),
+        priority: 1.0
 
   }))
 }
