@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
-import { Menu } from 'react-feather';
+import { Menu } from 'lucide-react';
 
 const Links = () => {
 
@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="font-bold text-md max-w-[300px] min-[400px]:max-w-none md:text-xl lg:text-2xl ">Psychotherapy and Parenting Consultation</div>
     </div>
       <a className="md:hidden" href="#mobile" onClick={showMenu}>
-        <Menu />
+        <Menu><title>See navigation links</title></Menu>
       </a>
       <div className={`${showHamburger ? 'flex flex-wrap justify-between' : 'hidden'} md:space-x-8 md:block md:text-xl lg:text-2xl xl:text-3xl max-[1440px]:mx-auto max-[1440px]:mt-8`}>
         <Links />
