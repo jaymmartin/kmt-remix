@@ -4,12 +4,11 @@ import Main from '../components/Main'
 import Image from '../components/Image'
 
 
-export const meta: MetaFunction = () => {
-  return {
-    title: "Kate Martin Therapy - Rates",
-    description:
-      "The rates for the services provided by Kate Martin Therapy.",
-  };
+export const meta = () => {
+  return [
+    { title: "Kate Martin Therapy - Rates" },
+    { name: "description", content: "The rates for the services provided by Kate Martin Therapy." },
+  ];
 };
 
 export default function Rates() {

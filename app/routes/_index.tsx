@@ -1,16 +1,15 @@
 
-import type { MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction } from "@remix-run/node";
 import Main from '../components/Main'
 import Image from '../components/Image'
 
-export const meta: MetaFunction = () => {
-  return {
-    title: "Kate Martin Therapy - Telehealth Therapy for NJ",
-    description:
-      "Kate Martin Therapy provides telehealth therapy sessions to patients in New Jersey.",
-    "og:image": "https://katemartintherapy.com/images/brittany.webp",
-    "og-url": "https://katemartintherapy.com",
-  };
+export const meta: V2_MetaFunction = () => {
+  return [
+    { title: "Kate Martin Therapy - Telehealth Therapy for NJ" },
+    { name:"description", content: "Kate Martin Therapy provides telehealth therapy sessions to patients in New Jersey." },
+    { property:"og:image", content:"https://katemartintherapy.com/images/garcia.webp"},
+    { property:"og-url", content: "https://katemartintherapy.com"},
+  ];
 };
 
 export default function Index() {
