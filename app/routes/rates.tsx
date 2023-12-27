@@ -22,7 +22,7 @@ export default function Rates() {
         <div className="basis-full md:basis-5/12">
           <h1 className="font-bold text-xl mb-3">Rates</h1>
           <p className="mb-6">
-            Individual session (45 minutes) $180 <br />
+            Individual session (45 minutes) $190 <br />
             Sessions that run longer than 45 minutes are charged for additional time pro-rata. <br /><br />
             Payment via cash or credit card is due at time of service.
 
