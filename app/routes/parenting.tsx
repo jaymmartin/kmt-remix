@@ -5,12 +5,11 @@ import Main from '../components/Main'
 import Image from '../components/Image'
 
 
-export const meta: MetaFunction = () => {
-  return {
-    title: "Kate Martin Therapy - Parenting",
-    description:
-      "Details about parenting related therapy by Kate Martin Therapy.",
-  };
+export const meta = () => {
+  return [
+    { title: "Kate Martin Therapy - Parenting" },
+    { name: "description", "content": "Details about parenting related therapy by Kate Martin Therapy." },
+  ];
 };
 
 export default function Parenting() {

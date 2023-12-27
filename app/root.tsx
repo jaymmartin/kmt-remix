@@ -1,4 +1,4 @@
-import type { MetaFunction, SerializeFrom } from "@remix-run/node";
+import type {  SerializeFrom } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -7,18 +7,18 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { ExternalScripts, ExternalScriptsFunction } from "remix-utils";
+// import { ExternalScripts, ExternalScriptsFunction } from "remix-utils/external-scripts";
 import Navbar from 'app/components/Navbar'
 import Footer from 'app/components/Footer'
 
 
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "Kate Martin Therapy - Telehealth Therapy for NJ",
-  viewport: "width=device-width,initial-scale=1",
-  "og-type": "website"
-});
+export const meta = () => {
+  return [
+    {title: "Kate Martin Therapy - Telehealth Therapy for NJ"},
+    { property:"og-type", content:"website"},
+  ];
+};
 
 import styles from "./tailwind.css";
 import { SyntheticEvent } from "react";
@@ -43,27 +43,32 @@ export function links() {
   ];
 }
 
-let scripts: ExternalScriptsFunction = ({ id, data, params, location, parentsData, }) => {
-  const prodScripts: any[] = [
-    { src: 'https://static.cloudflareinsights.com/beacon.min.js', "data-cf-beacon": '{"token": "5dd3b98004e4423d9d9b772d09a6e688"}', defer: "defer" },
-  ];
-  const devScripts: any[] = [];
-  const allScripts: any[] = [];
+// let scripts: ExternalScriptsFunction = ({ id, data, params, location, parentsData, }) => {
+//   const prodScripts: any[] = [
+//     { src: 'https://static.cloudflareinsights.com/beacon.min.js', "data-cf-beacon": '{"token": "5dd3b98004e4423d9d9b772d09a6e688"}', defer: "defer" },
+//   ];
+//   const devScripts: any[] = [];
+//   const allScripts: any[] = [];
 
-  if (process.env.NODE_ENV === "development")
-    return devScripts.concat(allScripts);
+//   if (process.env.NODE_ENV === "development")
+//     return devScripts.concat(allScripts);
 
-  return prodScripts.concat(allScripts);
-};
+//   return prodScripts.concat(allScripts);
+// };
 
-// and export it through the handle, you could also create it inline here
-// if you don't care about the type
-export let handle = { scripts };
+// // and export it through the handle, you could also create it inline here
+// // if you don't care about the type
+// export let handle = { scripts };
 
 export default function App() {
   return (
     <html lang="en">
       <head>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1"
+        />
         <Meta />
         <Links />
       </head>
@@ -72,7 +77,7 @@ export default function App() {
         <div className="grow"><Outlet /></div>
         <Footer />
         <ScrollRestoration />
-        <ExternalScripts />
+        {/* <ExternalScripts /> */}
         <Scripts />
         <LiveReload />
       </body>

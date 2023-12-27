@@ -2,14 +2,13 @@ import type { MetaFunction } from "@remix-run/node";
 import Main from '../components/Main'
 import Image from '../components/Image'
 
-export const meta: MetaFunction = () => {
-  return {
-    title: "Kate Martin Therapy - Services",
-    description:
-      "Kate Martin Therapy provides virtual and walk and talk sessions for clients",
-    "og:image": "https://katemartintherapy.com/images/tran.webp",
-    "og-url": "https://katemartintherapy.com/services",
-  };
+export const meta = () => {
+  return [
+    { title: "Kate Martin Therapy - Services" },
+    { name: "description", content: "Kate Martin Therapy provides virtual and walk and talk sessions for clients" },
+    { property: "og:image", content: "https://katemartintherapy.com/images/olek.webp" },
+    { property: "og-url", content: "https://katemartintherapy.com/services" },
+  ];
 };
 
 export default function Services() {
