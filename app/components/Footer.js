@@ -25,7 +25,7 @@ export default function Footer() {
           <Instagram />
         </a>
       </div>
-      <a className="flex justify-center" href="https://www.psychologytoday.com/profile/1117621" target="_blank"><Seal /></a>
+      {/* <a className="flex justify-center" href="https://www.psychologytoday.com/profile/1117621" target="_blank"><Seal /></a> */}
     </footer>
 
   );
